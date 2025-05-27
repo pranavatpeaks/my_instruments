@@ -1,10 +1,15 @@
 import { google } from 'googleapis';
 
-export default async function POST(req, res) {
+export default async function handler(req, res) {
+if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
   const { name, email } = req.body;
 
-  if (!email) return res.status(400).json({ error: 'Email is required' });
+  if (!email || !name) {
+    return res.status(400).json({ error: 'Missing name or email' });
+  }
 
   const auth = new google.auth.GoogleAuth({
     credentials: {
@@ -33,4 +38,5 @@ export default async function POST(req, res) {
     console.error('Error adding to sheet:', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
+
 }

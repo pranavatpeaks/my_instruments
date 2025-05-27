@@ -1,7 +1,6 @@
 import { google } from 'googleapis';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).end();
+export default async function POST(req, res) {
 
   const { name, email } = req.body;
 

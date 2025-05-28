@@ -46,7 +46,7 @@ export default function Home() {
          </h1>
             <p className={styles.description}>
               This is Pranav and these are <span className={styles.highlight}>my instruments</span>. 
-               Subscribe to let <span className={styles.highlight}>my sound flow</span> through your mailboxes.
+              <p> Subscribe to let <span className={styles.highlight}>my sound flow</span> through your mailboxes.</p>
             </p>
          
           <p></p>

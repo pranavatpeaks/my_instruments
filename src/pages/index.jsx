@@ -45,7 +45,7 @@ export default function Home() {
               subscribe to <span className={styles.brand}>my instruments</span>
          </h1>
             <p className={styles.description}>
-              This is Pranav and these are <span className={styles.highlight}>my instruments</span>.<br>
+              This is Pranav and these are <span className={styles.highlight}>my instruments</span>.<br />
               Subscribe to let <span className={styles.highlight}>my sound flow</span> through your mailboxes.
             </p>
           <form onSubmit={handleSubmit} className={styles.form}>
